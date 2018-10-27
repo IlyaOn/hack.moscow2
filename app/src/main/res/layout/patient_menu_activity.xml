@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_start_menu"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <LinearLayout
+            android:layout_height="500dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:background="@drawable/linear_layout_custom"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="60dp" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ring_bottom"
+                android:text="1" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ring_bottom"
+                android:text="2" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ring_bottom"
+                android:text="3" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ring_bottom"
+                android:text="4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnSpan="2">
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Andrey"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Staroverov"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dmitrievich"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15.04.1999"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="News"
+            android:textSize="35sp"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/textview"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:text="New dug kills antibiotic-resistant bacteria in clinical trial"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/textview_whiteback"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:text="Antibiotic resistantblabla blablavlsdlvlsdlvlsdlvlsdlvsldvlsdlsuuuuuuka"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/textview"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:text="Novel drug is effective and well-toerated"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/textview_whiteback"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:text="Antibiotic resistantblabla blablavlsdlvlsdlvlsdlvlsdlvsldvlsdlsuuuuuuka"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/textview"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:text="Novel drug is effective and well-toerated"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/textview_whiteback"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:text="Antibiotic resistantblabla blablavlsdlvlsdlvlsdlvlsdlvsldvlsdlsuuuuuuka"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>

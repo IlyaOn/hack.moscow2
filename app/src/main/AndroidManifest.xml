@@ -60,6 +60,10 @@
             android:name=".Doctor_Ankete"
             android:label="Doctor_Ankete">
         </activity>
+        <activity
+            android:name=".PatientMenu"
+            android:label="PatientMenu">
+        </activity>
     </application>
 
 </manifest>
