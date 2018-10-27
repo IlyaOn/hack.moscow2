@@ -78,6 +78,7 @@
     <Button
         android:id="@+id/button_register"
         style="@style/Widget.AppCompat.Button"
+        android:onClick="Register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/button_login"
