@@ -52,6 +52,10 @@
             android:name=".Patient_Course_Treatment"
             android:label="Patient_Course_Treatment">
         </activity>
+        <activity
+            android:name=".MedicalCard"
+            android:label="MedicalCard">
+        </activity>
     </application>
 
 </manifest>
