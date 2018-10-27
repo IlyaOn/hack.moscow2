@@ -117,7 +117,11 @@ public class HealthMain extends AppCompatActivity {
             if (pass_str.equals(""))
                 Toast.makeText(getApplicationContext(), "Для начала введите пароль!", Toast.LENGTH_SHORT).show();
             else{
-                Intent intent = new Intent(HealthMain.this, MedicalCard.class);
+                Intent intent = new Intent();
+                if (patient_flag)
+                    intent = new Intent(HealthMain.this, MedicalCard.class);
+                else if (doctor_flag)
+                    intent = new Intent(HealthMain.this, Doctor_Ankete.class);
                 intent.putExtra("username", user_str);
                 intent.putExtra("password", pass_str);
                 startActivity(intent);

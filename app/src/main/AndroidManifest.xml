@@ -52,9 +52,13 @@
             android:name=".Patient_Course_Treatment"
             android:label="Patient_Course_Treatment">
         </activity>
-        <activity
+            <activity
             android:name=".MedicalCard"
             android:label="MedicalCard">
+        </activity>
+        <activity
+            android:name=".Doctor_Ankete"
+            android:label="Doctor_Ankete">
         </activity>
     </application>
 

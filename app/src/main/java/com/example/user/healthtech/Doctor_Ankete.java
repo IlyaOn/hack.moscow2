@@ -10,43 +10,39 @@ import android.widget.Toast;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MedicalCard extends AppCompatActivity {
-
+public class Doctor_Ankete extends AppCompatActivity {
     private String user_name;
     private String user_pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.medical_card_activity);
+        setContentView(R.layout.doctor_ankee_activity);
 
         user_name = getIntent().getExtras().getString("username");
         user_pass = getIntent().getExtras().getString("password");
     }
 
-    public void SaveCard(View view){
-        String name = ((EditText)findViewById(R.id.edit_name)).getText().toString();
-        String surname = ((EditText)findViewById(R.id.edit_surname)).getText().toString();
-        String lastname = ((EditText)findViewById(R.id.edit_lastname)).getText().toString();
-        String date = ((EditText)findViewById(R.id.edit_date_of_birth)).getText().toString();
-        String polis = ((EditText)findViewById(R.id.edit_polis)).getText().toString();
+    public void SaveAnkete(View view){
+        String name = ((EditText)findViewById(R.id.edit_name_doctor)).getText().toString();
+        String surname = ((EditText)findViewById(R.id.edit_surname_doctor)).getText().toString();
+        String lastname = ((EditText)findViewById(R.id.edit_lastname_doctor)).getText().toString();
+        String date = ((EditText)findViewById(R.id.edit_date_of_birth_doctor)).getText().toString();
         String patternNames = "^[ ]*[A-Za-z]+[ ]*$";
         String patternDate =  "^[ ]*[0-9]{2}[.][0-9]{2}[.][0-9]{4}[ ]*$";
-        String patternPolis = "^[ ]*[0-9]{16}[ ]*$";
         if (CheckStr(name, patternNames) &&
                 CheckStr(surname, patternNames) &&
                 (CheckStr(lastname, patternNames)|| lastname.equals("")) &&
-                CheckStr(date, patternDate) &&
-                CheckStr(polis, patternPolis))
+                CheckStr(date, patternDate))
         {
             Toast.makeText(getApplicationContext(), "Вы успешно зарегестрированы, " + name + " " + lastname + "!",Toast.LENGTH_SHORT).show();
 
-            String temp_to_serv = "{\"isRegister\":" + true + ",\"isPatient\":" + true + ",\"name\":\"" + name + "\",\"surname\":\"" + surname + "\",\"lastname\":\"" + lastname +
+            String temp_to_serv = "{\"isRegister\":" + true + ",\"isPatient\":" + false + ",\"name\":\"" + name + "\",\"surname\":\"" + surname + "\",\"lastname\":\"" + lastname +
                     "\",\"login\":\"" + user_name + "\",\"password\":\"" + user_pass + "\"}";
             Json.gettingJSON = temp_to_serv;
             Json.communication_server();
 
-            Intent intent = new Intent(MedicalCard.this, Patient_Login.class);
+            Intent intent = new Intent(Doctor_Ankete.this, Doctor_Login.class);
             intent.putExtra("username", user_name);
             startActivity(intent);
         }

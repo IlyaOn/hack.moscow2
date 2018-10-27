@@ -10,7 +10,7 @@
         <TextView
             android:layout_row="0"
             android:layout_column="0"
-            android:text="Medical Card."
+            android:text="Questionnaire."
             android:textStyle="bold"
             android:textSize="25sp" />
         <TextView
@@ -19,7 +19,7 @@
             android:text="Name:"
             android:textSize="24sp" />
         <EditText
-            android:id="@+id/edit_name"
+            android:id="@+id/edit_name_doctor"
             android:layout_row="2"
             android:layout_column="0"
             android:hint="Ivan"
@@ -31,7 +31,7 @@
             android:text="Surname:"
             android:textSize="24sp" />
         <EditText
-            android:id="@+id/edit_surname"
+            android:id="@+id/edit_surname_doctor"
             android:layout_row="4"
             android:layout_column="0"
             android:hint="Ivanov"
@@ -44,7 +44,7 @@
             android:text="Lastname (if any):"
             android:textSize="24sp" />
         <EditText
-            android:id="@+id/edit_lastname"
+            android:id="@+id/edit_lastname_doctor"
             android:layout_row="6"
             android:layout_column="0"
             android:hint="Ivanovich"
@@ -57,33 +57,20 @@
             android:text="Date of Birth:"
             android:textSize="24sp" />
         <EditText
-            android:id="@+id/edit_date_of_birth"
+            android:id="@+id/edit_date_of_birth_doctor"
             android:layout_row="8"
             android:layout_column="0"
             android:hint="01.01.1970"
             android:textSize="24sp"
             android:inputType="date"/>
-        <TextView
-
-            android:layout_row="9"
-            android:layout_column="0"
-            android:text="Medical Policy Number (16 digits):"
-            android:textSize="24sp" />
-        <EditText
-            android:id="@+id/edit_polis"
-            android:layout_row="10"
-            android:layout_column="0"
-            android:hint="0000111122223333"
-            android:textSize="24sp"
-            android:inputType="number"/>
         <Button
             style="@style/Widget.AppCompat.Button"
             android:background="@drawable/button_shape"
-            android:layout_row="11"
+            android:layout_row="10"
             android:layout_column="0"
             android:layout_gravity="center"
             android:text="Save"
             android:textSize="20sp"
-            android:onClick="SaveCard"/>
+            android:onClick="SaveAnkete"/>
     </GridLayout>
 </android.support.constraint.ConstraintLayout>
