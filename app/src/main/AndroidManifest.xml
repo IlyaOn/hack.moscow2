@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.healthtech">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".HealthMain">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Doctor_Login"
+            android:label="Doctor_Login">
+        </activity>
+        <activity
+            android:name=".Doctor_Chat"
+            android:label="Doctor_Chat">
+        </activity>
+        <activity
+            android:name=".Doctor_Choose_Patient"
+            android:label="Doctor_Choose_Patient">
+        </activity>
+        <activity
+            android:name=".Doctor_Course"
+            android:label="Doctor_Course">
+        </activity>
+        <activity
+            android:name=".Patient_Login"
+            android:label="Patient_Login">
+        </activity>
+        <activity
+            android:name=".Patient_Info"
+            android:label="Patient_Info">
+        </activity>
+        <activity
+            android:name=".Patient_Chat"
+            android:label="Patient_Chat">
+        </activity>
+        <activity
+            android:name=".Patient_Choose_Doctor"
+            android:label="Patient_Choose_Doctor">
+        </activity>
+        <activity
+            android:name=".Patient_Course_Treatment"
+            android:label="Patient_Course_Treatment">
+        </activity>
+    </application>
+
+</manifest>
