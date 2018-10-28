@@ -24,7 +24,10 @@
             android:layout_column="0"
             android:hint="Ivan"
             android:textSize="24sp"
-            android:inputType="textPersonName"/>
+            android:padding="5dp"
+            android:inputType="textPersonName"
+            android:background="@drawable/textview"
+            android:width="250dp"/>
         <TextView
             android:layout_row="3"
             android:layout_column="0"
@@ -35,8 +38,11 @@
             android:layout_row="4"
             android:layout_column="0"
             android:hint="Ivanov"
+            android:padding="5dp"
             android:textSize="24sp"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:background="@drawable/textview"
+            android:width="250dp"/>
         <TextView
 
             android:layout_row="5"
@@ -48,8 +54,11 @@
             android:layout_row="6"
             android:layout_column="0"
             android:hint="Ivanovich"
+            android:padding="5dp"
             android:textSize="24sp"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:background="@drawable/textview"
+            android:width="250dp"/>
         <TextView
 
             android:layout_row="7"
@@ -61,8 +70,11 @@
             android:layout_row="8"
             android:layout_column="0"
             android:hint="01.01.1970"
+            android:padding="5dp"
             android:textSize="24sp"
-            android:inputType="date"/>
+            android:inputType="date"
+            android:background="@drawable/textview"
+            android:width="250dp"/>
         <Button
             style="@style/Widget.AppCompat.Button"
             android:background="@drawable/button_shape"
@@ -71,6 +83,7 @@
             android:layout_gravity="center"
             android:text="Save"
             android:textSize="20sp"
-            android:onClick="SaveAnkete"/>
+            android:onClick="SaveAnkete"
+            android:layout_margin="40"/>
     </GridLayout>
 </android.support.constraint.ConstraintLayout>

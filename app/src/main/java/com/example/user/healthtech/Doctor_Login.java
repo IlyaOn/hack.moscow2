@@ -10,26 +10,43 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 public class Doctor_Login extends Activity {
 
-    private String user;
-    private String patient;
+    private String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.doctor_login_activity);
-        user = getIntent().getExtras().getString("username");
+        id = getIntent().getExtras().getString("id");
+        id = "0";
         ArrayList<String> names = new ArrayList<>();
         // находим список
-        ListView list = (ListView) findViewById(R.id.list);
+        ListView list = (ListView) findViewById(R.id.list1);
         // создаем адаптер
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, names);
-        for (int i = 0; i < 5; i++)
-            names.add("Patient " + i + " of " + user);
+
+        Json.communication_server("info/doctors/", "{\"patientId\":"+id+"}");
+
+        try {
+            JSONObject jsn = new JSONObject(Json.gettingJSON);
+            JSONArray doctors = jsn.getJSONArray("doctors");
+            for (int i = 0; i < doctors.length();  i++){
+                JSONObject obj = doctors.getJSONObject(i);
+                names.add(obj.getString("name")  + " " + obj.getString("surname"));
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         adapter.notifyDataSetChanged();
         // присваиваем адаптер списку
         list.setAdapter(adapter);
@@ -39,10 +56,10 @@ public class Doctor_Login extends Activity {
                                     int position, long id){
                 Toast.makeText(getApplicationContext(), ((TextView)view).getText(),
                         Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(Doctor_Login.this,Doctor_Choose_Patient.class);
-                //intent.putExtra("username", user);
-               // intent.putExtra("patient", ((TextView)view).getText());
-                //startActivity(intent);
+                Intent intent = new Intent(Doctor_Login.this,Doctor_Course.class);
+                intent.putExtra("id", id);
+                intent.putExtra("doctor", ((TextView)view).getText());
+                startActivity(intent);
             }
         });
     }

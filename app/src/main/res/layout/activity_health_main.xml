@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_start_menu">
@@ -11,8 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Авторизация"
+        android:layout_marginTop="25dp"
+        android:textSize="30sp"
+        android:text="Welcome"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -23,7 +25,7 @@
         android:layout_alignStart="@+id/password_text"
         android:layout_below="@+id/Login"
         android:layout_marginTop="79dp"
-        android:text="Пользователь:"
+        android:text="Login:"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
@@ -34,7 +36,10 @@
         android:layout_alignBottom="@+id/user_text"
         android:layout_alignLeft="@+id/edit_password"
         android:layout_alignStart="@+id/edit_password"
-        android:hint="введите имя ">
+        android:hint="input login "
+        android:padding="5dp"
+        android:background="@drawable/textview"
+        android:width="150dp">
 
         <requestFocus />
     </EditText>
@@ -49,7 +54,7 @@
         android:layout_marginTop="28dp"
         android:layout_toLeftOf="@+id/doctor_patient_switch"
         android:layout_toStartOf="@+id/doctor_patient_switch"
-        android:text="Пароль:"
+        android:text="Password:"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
@@ -60,8 +65,11 @@
         android:layout_alignBottom="@+id/password_text"
         android:layout_alignLeft="@+id/button_register"
         android:layout_alignStart="@+id/button_register"
-        android:hint="введите пароль"
-        android:inputType="textPassword" />
+        android:hint="input password"
+        android:padding="5dp"
+        android:inputType="textPassword"
+        android:background="@drawable/textview"
+        android:width="150dp"/>
 
     <Button
         android:id="@+id/button_login"
@@ -73,7 +81,7 @@
         android:layout_marginTop="43dp"
         android:background="@drawable/button_shape"
         android:onClick="Login"
-        android:text="Войти" />
+        android:text="Sign in" />
 
     <Button
         android:id="@+id/button_register"
@@ -86,8 +94,7 @@
         android:layout_below="@+id/button_login"
         android:layout_marginTop="18dp"
         android:background="@drawable/button_shape"
-        android:fontFamily="casual"
-        android:text="Регистрация"
+        android:text="Sugn up"
         android:textAppearance="@style/TextAppearance.AppCompat.Button" />
 
     <Switch
@@ -97,6 +104,6 @@
         android:layout_marginTop="300dp"
         android:layout_centerHorizontal="true"
         android:checked="false"
-        android:text="Доктор/Пациент" />
+        android:text="Doctor/Patient" />
 
 </RelativeLayout>

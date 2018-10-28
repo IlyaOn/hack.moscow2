@@ -21,10 +21,13 @@
         <EditText
             android:id="@+id/edit_name"
             android:layout_row="2"
+            android:width="250dp"
             android:layout_column="0"
             android:hint="Ivan"
+            android:padding="5dp"
             android:textSize="24sp"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:background="@drawable/textview"/>
         <TextView
             android:layout_row="3"
             android:layout_column="0"
@@ -33,10 +36,13 @@
         <EditText
             android:id="@+id/edit_surname"
             android:layout_row="4"
+            android:padding="5dp"
             android:layout_column="0"
             android:hint="Ivanov"
             android:textSize="24sp"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:background="@drawable/textview"
+            android:width="250dp"/>
         <TextView
 
             android:layout_row="5"
@@ -46,10 +52,13 @@
         <EditText
             android:id="@+id/edit_lastname"
             android:layout_row="6"
+            android:width="250dp"
+            android:padding="5dp"
             android:layout_column="0"
             android:hint="Ivanovich"
             android:textSize="24sp"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:background="@drawable/textview"/>
         <TextView
 
             android:layout_row="7"
@@ -59,10 +68,13 @@
         <EditText
             android:id="@+id/edit_date_of_birth"
             android:layout_row="8"
+            android:width="250dp"
             android:layout_column="0"
+            android:padding="5dp"
             android:hint="01.01.1970"
             android:textSize="24sp"
-            android:inputType="date"/>
+            android:inputType="date"
+            android:background="@drawable/textview"/>
         <TextView
 
             android:layout_row="9"
@@ -72,10 +84,13 @@
         <EditText
             android:id="@+id/edit_polis"
             android:layout_row="10"
+            android:width="250dp"
             android:layout_column="0"
+            android:padding="5dp"
             android:hint="0000111122223333"
             android:textSize="24sp"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:background="@drawable/textview"/>
         <Button
             style="@style/Widget.AppCompat.Button"
             android:background="@drawable/button_shape"
