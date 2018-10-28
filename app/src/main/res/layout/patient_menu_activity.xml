@@ -147,7 +147,7 @@
                         android:background="@drawable/textview_whiteback"
                         android:gravity="left"
                         android:padding="5dp"
-                        android:text="Antibiotic resistantblabla blablavlsdlvlsdlvlsdlvlsdlvsldvlsdlsuuuuuuka"
+                        android:text="Antibiotic resistantblabla blablavlsdlvlsdlvlsdlvlsdlvsldvlsdlqweqweqweqweqwe"
                         android:textColor="#000"
                         android:textSize="20sp" />
 
@@ -169,7 +169,7 @@
                         android:background="@drawable/textview_whiteback"
                         android:gravity="left"
                         android:padding="5dp"
-                        android:text="Antibiotic resistantblabla blablavlsdlvlsdlvlsdlvlsdlvsldvlsdlsuuuuuuka"
+                        android:text="Antibiotic resistantblabla blablavlsdlvlsdlvlsdlvlsdlvsldvlsdlqweqweqwe"
                         android:textColor="#000"
                         android:textSize="20sp" />
 

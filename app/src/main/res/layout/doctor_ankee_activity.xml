@@ -84,6 +84,6 @@
             android:text="Save"
             android:textSize="20sp"
             android:onClick="SaveAnkete"
-            android:layout_margin="40"/>
+            android:layout_margin="40dp"/>
     </GridLayout>
 </android.support.constraint.ConstraintLayout>
