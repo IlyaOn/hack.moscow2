@@ -4,9 +4,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".HealthMain">
@@ -25,10 +23,6 @@
             android:label="Doctor_Chat">
         </activity>
         <activity
-            android:name=".Doctor_Choose_Patient"
-            android:label="Doctor_Choose_Patient">
-        </activity>
-        <activity
             android:name=".Doctor_Course"
             android:label="Doctor_Course">
         </activity>
@@ -43,10 +37,6 @@
         <activity
             android:name=".Patient_Chat"
             android:label="Patient_Chat">
-        </activity>
-        <activity
-            android:name=".Patient_Choose_Doctor"
-            android:label="Patient_Choose_Doctor">
         </activity>
         <activity
             android:name=".Patient_Course_Treatment"

@@ -18,9 +18,10 @@ import static java.lang.Boolean.getBoolean;
 
 public class HealthMain extends AppCompatActivity {
 
-    private String name;
-    private String surname;
-    private String lastname;
+    private String id =  "";
+    private String name = "qwe";
+    private String surname = "qwe";
+    private String lastname= "qwe";
     private String host;
     private Switch choose_switch;
     private EditText username;
@@ -67,41 +68,44 @@ public class HealthMain extends AppCompatActivity {
         if (user_str.equals("")|| pass_str.equals(""))
             Toast.makeText(getApplicationContext(), "Поля не могут оставаться пустыми!",Toast.LENGTH_SHORT).show();
         else if (patient_flag) {
-            temp_to_serv = "{\"isRegister\":" + false + ",\"isPatient\":" + true + ",\"name\":" + name + ",\"surname\":" + surname + ",\"lastname\":" + lastname +
-                    ",\"login\":" + user_str + ",\"password\":" + pass_str + "}";
+            temp_to_serv = "{\"isRegister\":" + false + ",\"isPatient\":" + true + ",\"name\":\"" + name + "\",\"surname\":\"" + surname + "\",\"lastname\":\"" + lastname +
+                    "\",\"login\":\"" + user_str + "\",\"password\":\"" + pass_str + "\"}";
             Json.gettingJSON = temp_to_serv;
-            Json.communication_server();
-            JSONObject j_obj;
+            Json.communication_server("enter/", temp_to_serv);
+            JSONObject j_obj = new JSONObject();
             boolean flag = false;
             try {
                 j_obj = new JSONObject(Json.gettingJSON);
-                flag =  j_obj.getBoolean("isRegister");
+                flag =  j_obj.getBoolean("isSuccess");
+                id = j_obj.getString("id");
             } catch (JSONException e){};
             if (flag) {
+
                 Toast.makeText(getApplicationContext(), "Вход выполнен!", Toast.LENGTH_SHORT).show();
                 // Выполняем переход на другой экран:
-                Intent intent = new Intent(HealthMain.this, Patient_Login.class);
-                intent.putExtra("username", user_str);
+                Intent intent = new Intent(HealthMain.this, PatientMenu.class);
+                intent.putExtra("id", id);
                 startActivity(intent);
             } else
                 Toast.makeText(getApplicationContext(), "Некорректный логин/пароль!",Toast.LENGTH_SHORT).show();
         }
         else if (doctor_flag) {
-            temp_to_serv = "{\"isRegister\":" + false + ",\"isPatient\":" + false + ",\"name\":" + name + ",\"surname\":" + surname + ",\"lastname\":" + lastname +
-                    ",\"login\":" + user_str + ",\"password\":" + pass_str + "}";
+            temp_to_serv = "{\"isRegister\":" + false + ",\"isPatient\":" + false + ",\"name\":\"" + name + "\",\"surname\":\"" + surname + "\",\"lastname\":\"" + lastname +
+                    "\",\"login\":\"" + user_str + "\",\"password\":\"" + pass_str + "\"}";
             Json.gettingJSON = temp_to_serv;
-            Json.communication_server();
+            Json.communication_server("enter/", temp_to_serv );
             JSONObject j_obj;
             boolean flag = false;
             try {
                 j_obj = new JSONObject(Json.gettingJSON);
                 flag =  j_obj.getBoolean("isSuccess");
+                id = j_obj.getString("id");
             } catch (JSONException e){};
             if (flag) {
                 Toast.makeText(getApplicationContext(), "Вход выполнен!",Toast.LENGTH_SHORT).show();
                 // Выполняем переход на другой экран:
                 Intent intent = new Intent(HealthMain.this, Doctor_Login.class);
-                intent.putExtra("username", user_str);
+                intent.putExtra("id", id);
                 startActivity(intent);
             } else
                 Toast.makeText(getApplicationContext(), "Некорректный логин/пароль!",Toast.LENGTH_SHORT).show();

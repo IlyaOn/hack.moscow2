@@ -44,9 +44,9 @@ public class MedicalCard extends AppCompatActivity {
             String temp_to_serv = "{\"isRegister\":" + true + ",\"isPatient\":" + true + ",\"name\":\"" + name + "\",\"surname\":\"" + surname + "\",\"lastname\":\"" + lastname +
                     "\",\"login\":\"" + user_name + "\",\"password\":\"" + user_pass + "\"}";
             Json.gettingJSON = temp_to_serv;
-            Json.communication_server();
+            Json.communication_server("enter/", temp_to_serv);
 
-            Intent intent = new Intent(MedicalCard.this, Patient_Login.class);
+            Intent intent = new Intent(MedicalCard.this, HealthMain.class);
             intent.putExtra("username", user_name);
             startActivity(intent);
         }

@@ -27,29 +27,26 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/ring_bottom"
-                android:text="1" />
+                android:background="@mipmap/treatment"
+                android:onClick="getDoctors" />
 
             <Button
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/ring_bottom"
-                android:text="2" />
+                android:background="@mipmap/treatment1" />
 
             <Button
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/ring_bottom"
-                android:text="3" />
+                android:background="@mipmap/treatment3" />
 
             <Button
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/ring_bottom"
-                android:text="4" />
+                android:background="@mipmap/treatment2" />
         </LinearLayout>
 
         <LinearLayout

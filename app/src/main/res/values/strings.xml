@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">HealthTech</string>
+    <string name="atient_ivan_ivanovich">atient Ivan Ivanovich</string>
+    <string name="Patient_ivan_ivanovich" />
+    <string name="diagnosis_nandroidstudioadadasdadasdasdasdasd_wfwefwefwefwefwefwvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv">Diagnosis: AndroidStudioadadasdadasdasdasdasd wfwefwefwefwefwefwvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv</string>
 </resources>

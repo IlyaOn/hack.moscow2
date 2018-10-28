@@ -40,9 +40,9 @@ public class Doctor_Ankete extends AppCompatActivity {
             String temp_to_serv = "{\"isRegister\":" + true + ",\"isPatient\":" + false + ",\"name\":\"" + name + "\",\"surname\":\"" + surname + "\",\"lastname\":\"" + lastname +
                     "\",\"login\":\"" + user_name + "\",\"password\":\"" + user_pass + "\"}";
             Json.gettingJSON = temp_to_serv;
-            Json.communication_server();
+            Json.communication_server("enter/",  temp_to_serv);
 
-            Intent intent = new Intent(Doctor_Ankete.this, Doctor_Login.class);
+            Intent intent = new Intent(Doctor_Ankete.this, HealthMain.class);
             intent.putExtra("username", user_name);
             startActivity(intent);
         }

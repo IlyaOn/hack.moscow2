@@ -15,7 +15,7 @@ import java.util.concurrent.CountDownLatch;
 public class Json {
     //  global variables
     static String gettingJSON;
-    static String URL = "http://44c83f66.ngrok.io/";
+    static String URL = "http://64a90e76.ngrok.io/";
     static CountDownLatch latch;
 
     static void getJSON(final String _URL,final String reg, final String strJSON) {
@@ -60,8 +60,7 @@ public class Json {
 
                         //Here is your json in string format
                         String responseJSON = response.toString();
-                        System.out.println(responseJSON);
-                        String gettingJSON = responseJSON;
+                        gettingJSON = responseJSON;
                         latch.countDown();
 
                     }
@@ -71,13 +70,11 @@ public class Json {
         thread.start();
     }
 
-    static void communication_server(){
+    static void communication_server(final String reg, final String strJSON){
         try {
-            String register = "enter/";
             latch = new CountDownLatch(1);
-            getJSON(URL, register, gettingJSON);
+            getJSON(URL, reg, strJSON);
             latch.await();
-            System.out.println(gettingJSON);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -39,10 +39,10 @@ public class Doctor_Login extends Activity {
                                     int position, long id){
                 Toast.makeText(getApplicationContext(), ((TextView)view).getText(),
                         Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Doctor_Login.this,Doctor_Choose_Patient.class);
-                intent.putExtra("username", user);
-                intent.putExtra("patient", ((TextView)view).getText());
-                startActivity(intent);
+                //Intent intent = new Intent(Doctor_Login.this,Doctor_Choose_Patient.class);
+                //intent.putExtra("username", user);
+               // intent.putExtra("patient", ((TextView)view).getText());
+                //startActivity(intent);
             }
         });
     }
